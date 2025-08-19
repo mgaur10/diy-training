@@ -42,7 +42,7 @@ resource "google_compute_network" "vpc_network" {
 
 # backend subnet
 resource "google_compute_subnetwork" "vpc_subnetwork" {
-  name          =  "${var.suffix}-subnet"
+  name          =  "${var.suffix}-vpc-subnet"
   provider      = google-beta
   ip_cidr_range = "10.0.1.0/24"
   region        = var.region
